@@ -15,3 +15,6 @@
 # Erwartete Ergebnis:
 Ergebnis nach der Ausführung der main.py Datei:
  
+# Mybinder
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2/HEAD)
