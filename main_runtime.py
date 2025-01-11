@@ -67,17 +67,23 @@ if __name__ == '__main__':
 
     reference_accuracy_file = 'reference_accuracy.txt'
     reference_confusion_matrix_file = 'reference_confusion_matrix.csv'
+    reference_train_accuracy_file = 'reference_train_accuracy.txt'  # Neue Datei für Train-Accuracy
 
-    # Write reference accuracy to a text file
+    # Write reference accuracy (Test) to a text file
     with open(reference_accuracy_file, 'w') as f:
         f.write(str(reference_accuracy))
+
+    # Write reference train accuracy to a separate text file
+    with open(reference_train_accuracy_file, 'w') as f:
+        f.write(str(train_accuracy))
 
     # Write reference confusion matrix to a CSV file
     reference_confusion_matrix.to_csv(reference_confusion_matrix_file, index=False)
 
     print(f"\nTest data and reference values have been exported:\n"
           f"- Test data: test_data.csv, test_labels.csv\n"
-          f"- Reference accuracy: {reference_accuracy_file}\n"
+          f"- Reference accuracy (Test): {reference_accuracy_file}\n"
+          f"- Reference train accuracy: {reference_train_accuracy_file}\n"
           f"- Reference confusion matrix: {reference_confusion_matrix_file}")
 
   
