@@ -65,10 +65,6 @@ if __name__ == '__main__':
     reference_accuracy = test_accuracy
     reference_confusion_matrix = pd.DataFrame(ta.test_confusion_matrix)
 
-    # Write reference accuracy to a text file
-    with open(reference_accuracy_file, 'w') as f:
-        f.write(str(reference_accuracy))
-
     # Write reference confusion matrix to a CSV file
     reference_confusion_matrix.to_csv(reference_confusion_matrix_file, index=False)
 
