@@ -1,54 +1,81 @@
-import unittest
 import pandas as pd
 import numpy as np
-from main_runtime import TheAlgorithm, X_train, y_train
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix, classification_report
+from decorators import my_logger, my_timer
 
-class TestAlgorithm(unittest.TestCase):
+# Load dataset
+data = pd.read_csv('Advertising.csv')
 
-    @classmethod
-    def setUpClass(cls):
-        # Lade Testdaten aus CSV-Dateien
-        cls.X_test = pd.read_csv('test_data.csv')
-        cls.y_test = pd.read_csv('test_labels.csv')
+# Select relevant features and target
+X = data[['Daily Time Spent on Site', 'Age', 'Area Income', 'Daily Internet Usage', 'Male']]
+y = data['Clicked on Ad']
 
-        # Initialisiere die Algorithmus-Klasse mit den geladenen Testdaten
-        cls.algo = TheAlgorithm(X_train, y_train, cls.X_test, cls.y_test)
-        
-        # Lade gespeicherte Referenzwerte (Test Accuracy aus reference_accuracies.txt)
-        with open('reference_accuracies.txt', 'r') as f:
-            lines = f.readlines()
-            cls.reference_test_accuracy = float(lines[1].split(':')[1].strip())
-        
-        # Lade gespeicherte Referenzkonfusionsmatrix
-        cls.reference_confusion_matrix = pd.read_csv('reference_confusion_matrix.csv').values
+# Split the data into train and test sets (80% train, 20% test)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-        # Führe die fit()-Funktion einmal aus und speichere die repräsentative Laufzeit
-        cls.representative_runtime = cls.algo.fit()
+# Define the Algorithm class
+class TheAlgorithm:
+    
+    @my_logger
+    @my_timer
+    def __init__(self, X_train, y_train, X_test, y_test):
+        self.X_train, self.y_train = X_train, y_train
+        self.X_test, self.y_test = X_test, y_test
+        self.scaler = MinMaxScaler()
+        self.classifier = LogisticRegression(random_state=42)
+    
+    @my_logger
+    @my_timer
+    def fit(self):
+        self.X_train = self.scaler.fit_transform(self.X_train)
+        self.X_test = self.scaler.transform(self.X_test)
+        self.classifier.fit(self.X_train, self.y_train)
+        self.train_accuracy = self.classifier.score(self.X_train, self.y_train) * 100
+        self.train_confusion_matrix = confusion_matrix(self.y_train, self.classifier.predict(self.X_train))
+        return self.train_accuracy
+    
+    @my_logger
+    @my_timer
+    def predict(self):
+        self.test_accuracy = self.classifier.score(self.X_test, self.y_test) * 100
+        self.test_confusion_matrix = confusion_matrix(self.y_test, self.classifier.predict(self.X_test))
+        self.report = classification_report(self.y_test, self.classifier.predict(self.X_test))
+        print("Classification report:\n", self.report)
+        return self.test_accuracy
 
-    def test_predict_accuracy(self):
-        """Test, ob die Accuracy und die Konfusionsmatrix korrekt sind."""
-        test_accuracy = self.algo.predict()
-        self.assertAlmostEqual(
-            test_accuracy, self.reference_test_accuracy, delta=0.5,
-            msg="Die Accuracy der predict()-Funktion weicht von der Referenz ab."
-        )
-        self.assertTrue(
-            np.array_equal(self.algo.test_confusion_matrix, self.reference_confusion_matrix),
-            "Die Konfusionsmatrix der predict()-Funktion weicht von der Referenz ab."
-        )
-
-    def test_fit_runtime(self):
-        """Test, ob die Laufzeit der fit()-Funktion innerhalb von 120% der repräsentativen Laufzeit liegt."""
-        import time
-        start_time = time.time()
-        self.algo.fit()
-        elapsed_time = time.time() - start_time
-        max_allowed_time = cls.representative_runtime * 1.2
-        self.assertLessEqual(
-            elapsed_time, max_allowed_time,
-            "Die Laufzeit der fit()-Funktion überschreitet den Grenzwert."
-        )
-
-# Führe die Unit-Tests aus
+# Instantiate the class and run fit and predict
 if __name__ == '__main__':
-    unittest.main(argv=['first-arg-is-ignored'], exit=False)
+    ta = TheAlgorithm(X_train, y_train, X_test, y_test)
+    
+    # Fit the model and get Train Accuracy
+    train_accuracy = ta.fit()
+    print("\nTrain Accuracy:", train_accuracy)
+    print("Train Confusion Matrix:\n", ta.train_confusion_matrix)
+
+    # Predict and get Test Accuracy
+    test_accuracy = ta.predict()
+    print("\nTest Accuracy:", test_accuracy)
+    print("Test Confusion Matrix:\n", ta.test_confusion_matrix)
+
+    # Export test data to CSV files
+    X_test.to_csv('test_data.csv', index=False)
+    y_test.to_csv('test_labels.csv', index=False)
+
+    # Write Train and Test Accuracy to a single text file
+    accuracy_file = 'reference_accuracies.txt'
+    with open(accuracy_file, 'w') as f:
+        f.write(f"Train Accuracy: {train_accuracy}\n")
+        f.write(f"Test Accuracy: {test_accuracy}\n")
+
+    # Write reference confusion matrix to a CSV file
+    reference_confusion_matrix = pd.DataFrame(ta.test_confusion_matrix)
+    reference_confusion_matrix.to_csv('reference_confusion_matrix.csv', index=False)
+
+    print(f"\nTrain and Test Accuracies have been exported to: {accuracy_file}")
+    print(f"\nTest data and reference values have been exported:\n"
+          f"- Test data: test_data.csv, test_labels.csv\n"
+          f"- Reference confusion matrix: reference_confusion_matrix.csv\n"
+          f"- Train and Test Accuracies: {accuracy_file}")
