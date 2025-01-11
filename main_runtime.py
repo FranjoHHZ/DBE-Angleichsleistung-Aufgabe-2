@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
     # Write reference confusion matrix to a CSV file
     reference_confusion_matrix.to_csv(reference_confusion_matrix_file, index=False)
-        accuracy_file = 'reference_accuracies.txt'
+    accuracy_file = 'reference_accuracies.txt'
     with open(accuracy_file, 'w') as f:
         f.write(f"Train Accuracy: {train_accuracy}\n")
         f.write(f"Test Accuracy: {test_accuracy}\n")
