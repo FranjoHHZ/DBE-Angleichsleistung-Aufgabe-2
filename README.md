@@ -9,14 +9,17 @@
 1.Öffnen Sie den Link zu Binder, den Sie im Binder-Badge in der README-Datei finden. Dadurch wird eine Binder-Umgebung gestartet.
 
 2.Starten Sie ein neues Terminal innerhalb der Binder-Umgebung.
+
 3.Geben Sie den folgenden Befehl ein:
 
    pip install -r requirements.txt
    
 4. Geben Sie den folgenden Befehl ein, um das Hauptskript auszuführen:
+5. 
    python main_runtime.py
    
 5.Geben Sie den folgenden Befehl ein, um die Unit-Tests auszuführen:
+
    python -m unittest test_runtime.py
    
 
