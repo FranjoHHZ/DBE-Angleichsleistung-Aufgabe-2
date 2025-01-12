@@ -15,7 +15,7 @@
       pip install -r requirements.txt
    
 4. Geben Sie den folgenden Befehl ein, um das Hauptskript auszuführen:
- 
+
       python main_runtime.py
    
 5.Geben Sie den folgenden Befehl ein, um die Unit-Tests auszuführen:
