@@ -25,9 +25,7 @@ Ergebnis nach der Ausführung der "test_runtime.py":
 
 
 
-Die Ergbisse sind in der Datei
-
-[reference_accuracy.txt](https://github.com/user-attachments/files/18389825/reference_accuracy.txt)94.0
+Die Ergbisse confunsion Matrix sowie die Accuracies sind nochmal in dem Order "Data" zufinden.
 
  
 # Mybinder
