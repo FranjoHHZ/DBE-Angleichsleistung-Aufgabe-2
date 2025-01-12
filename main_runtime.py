@@ -80,4 +80,3 @@ if __name__ == '__main__':
           f"- Reference accuracy: {reference_accuracy_file}\n"
           f"- Reference confusion matrix: {reference_confusion_matrix_file}")
 
-  
