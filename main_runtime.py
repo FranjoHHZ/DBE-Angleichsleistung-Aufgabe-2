@@ -1,4 +1,4 @@
-import pandas as pd
+ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
@@ -79,6 +79,5 @@ if __name__ == '__main__':
           f"- Test data: test_data.csv, test_labels.csv\n"
           f"- Reference accuracy: {reference_accuracy_file}\n"
           f"- Reference confusion matrix: {reference_confusion_matrix_file}")
-
 
   
