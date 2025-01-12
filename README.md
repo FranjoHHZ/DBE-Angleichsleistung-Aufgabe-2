@@ -13,11 +13,15 @@
 5. Gebe Sie folegen Befehl ein "python -m unittest test_runtime.py"
 
 # Erwartete Ergebnis:
-Ergebnis nach der Ausführung der main.py Datei:
+Ergebnis nach der Ausführung "main_runtime.py":
+
+![image](https://github.com/user-attachments/assets/fa4bddec-aa21-463b-aeb2-784177d82353)
 
 
+Ergebnis nach der Ausführung der "test_runtime.py":
 
-![image](https://github.com/user-attachments/assets/8d35480b-e9e2-4f13-9369-844855c67a3f)
+![image](https://github.com/user-attachments/assets/a0b46db7-e888-438d-b736-d705d1768552)
+
 
 
 
