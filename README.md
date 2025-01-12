@@ -42,3 +42,7 @@ Die Ergebnisse, wie die Confusion-Matrix sowie die Accuracies, sind nochmals im 
 # Mybinder
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2/HEAD)
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2/blob/main/main_runtime.ipynb)
+
+
