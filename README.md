@@ -15,12 +15,15 @@
 # Erwartete Ergebnis:
 Ergebnis nach der Ausführung der main.py Datei:
 
+
+
 ![image](https://github.com/user-attachments/assets/8d35480b-e9e2-4f13-9369-844855c67a3f)
 
 
 
 Die Ergbisse sind in der Datei
 
+[reference_accuracy.txt](https://github.com/user-attachments/files/18389825/reference_accuracy.txt)94.0
 
  
 # Mybinder
