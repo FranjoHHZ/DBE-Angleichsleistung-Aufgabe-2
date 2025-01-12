@@ -61,22 +61,31 @@ if __name__ == '__main__':
     X_test.to_csv('test_data.csv', index=False)
     y_test.to_csv('test_labels.csv', index=False)
 
-    # Save reference accuracy and confusion matrix
-    reference_accuracy = test_accuracy
-    reference_confusion_matrix = pd.DataFrame(ta.test_confusion_matrix)
-
+    # Save reference accuracy and confusion matrices
     reference_accuracy_file = 'reference_accuracy.txt'
+    reference_train_accuracy_file = 'reference_train_accuracy.txt'
     reference_confusion_matrix_file = 'reference_confusion_matrix.csv'
+    reference_train_confusion_matrix_file = 'reference_train_confusion_matrix.csv'
 
-    # Write reference accuracy to a text file
+    # Write test accuracy to a text file
     with open(reference_accuracy_file, 'w') as f:
-        f.write(str(reference_accuracy))
+        f.write(str(test_accuracy))
 
-    # Write reference confusion matrix to a CSV file
+    # Write train accuracy to a new text file
+    with open(reference_train_accuracy_file, 'w') as f:
+        f.write(str(train_accuracy))
+
+    # Write reference confusion matrices to CSV files
+    reference_confusion_matrix = pd.DataFrame(ta.test_confusion_matrix)
     reference_confusion_matrix.to_csv(reference_confusion_matrix_file, index=False)
+
+    reference_train_confusion_matrix = pd.DataFrame(ta.train_confusion_matrix)
+    reference_train_confusion_matrix.to_csv(reference_train_confusion_matrix_file, index=False)
 
     print(f"\nTest data and reference values have been exported:\n"
           f"- Test data: test_data.csv, test_labels.csv\n"
-          f"- Reference accuracy: {reference_accuracy_file}\n"
-          f"- Reference confusion matrix: {reference_confusion_matrix_file}")
+          f"- Reference accuracy (Test): {reference_accuracy_file}\n"
+          f"- Reference train accuracy: {reference_train_accuracy_file}\n"
+          f"- Reference confusion matrix (Test): {reference_confusion_matrix_file}\n"
+          f"- Reference confusion matrix (Train): {reference_train_confusion_matrix_file}")
 
