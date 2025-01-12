@@ -15,7 +15,7 @@
 # Erwartete Ergebnis:
 Ergebnis nach der Ausführung der main.py Datei:
 
-![image](https://github.com/user-attachments/assets/ff171839-4a53-4661-843d-1d69110a2d7d)
+![image](https://github.com/user-attachments/assets/8d35480b-e9e2-4f13-9369-844855c67a3f)
 
 
 
