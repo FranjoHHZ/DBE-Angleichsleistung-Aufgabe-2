@@ -1,0 +1,105 @@
+INFO:root:Ran with args: (<__main__.TheAlgorithm object at 0x7af4447ac3a0>,      Daily Time Spent on Site  Age  Area Income  Daily Internet Usage  Male
+29                      76.02   22     46179.97                209.82     0
+535                     78.76   32     70012.83                208.02     1
+695                     73.49   38     67132.46                244.23     0
+557                     79.67   28     58576.12                226.79     0
+836                     49.21   46     49206.40                115.60     0
+..                        ...  ...          ...                   ...   ...
+106                     72.23   25     46557.92                241.03     1
+270                     44.49   53     63100.13                168.00     1
+860                     91.37   45     51920.49                182.65     1
+435                     56.66   42     72684.44                139.42     0
+102                     89.91   40     59593.56                194.23     0
+
+[800 rows x 5 columns], 29     0
+535    0
+695    0
+557    0
+836    1
+      ..
+106    0
+270    1
+860    1
+435    1
+102    0
+Name: Clicked on Ad, Length: 800, dtype: int64,      Daily Time Spent on Site  Age  Area Income  Daily Internet Usage  Male
+521                     63.26   29     54787.37                120.46     1
+737                     71.23   52     41521.28                122.59     0
+740                     43.63   38     61757.12                135.25     1
+660                     42.04   49     67323.00                182.11     0
+411                     78.68   29     66225.72                208.05     0
+..                        ...  ...          ...                   ...   ...
+408                     51.68   49     51067.54                258.62     0
+332                     56.30   49     67430.96                135.24     1
+208                     59.51   58     39132.64                140.83     0
+613                     76.21   31     65834.97                228.94     1
+78                      56.14   38     32689.04                113.53     1
+
+[200 rows x 5 columns], 521    1
+737    1
+740    1
+660    1
+411    0
+      ..
+408    1
+332    1
+208    1
+613    0
+78     1
+Name: Clicked on Ad, Length: 200, dtype: int64), and kwargs: {}
+INFO:root:Ran with args: (<__main__.TheAlgorithm object at 0x7af4447ac3a0>,), and kwargs: {}
+INFO:root:Ran with args: (<__main__.TheAlgorithm object at 0x7af4447ac3a0>,), and kwargs: {}
+INFO:root:Ran with args: (<main_runtime.TheAlgorithm object at 0x79dcbf6da380>,      Daily Time Spent on Site  Age  Area Income  Daily Internet Usage  Male
+29                      76.02   22     46179.97                209.82     0
+535                     78.76   32     70012.83                208.02     1
+695                     73.49   38     67132.46                244.23     0
+557                     79.67   28     58576.12                226.79     0
+836                     49.21   46     49206.40                115.60     0
+..                        ...  ...          ...                   ...   ...
+106                     72.23   25     46557.92                241.03     1
+270                     44.49   53     63100.13                168.00     1
+860                     91.37   45     51920.49                182.65     1
+435                     56.66   42     72684.44                139.42     0
+102                     89.91   40     59593.56                194.23     0
+
+[800 rows x 5 columns], 29     0
+535    0
+695    0
+557    0
+836    1
+      ..
+106    0
+270    1
+860    1
+435    1
+102    0
+Name: Clicked on Ad, Length: 800, dtype: int64,      Daily Time Spent on Site  Age  Area Income  Daily Internet Usage  Male
+0                       63.26   29     54787.37                120.46     1
+1                       71.23   52     41521.28                122.59     0
+2                       43.63   38     61757.12                135.25     1
+3                       42.04   49     67323.00                182.11     0
+4                       78.68   29     66225.72                208.05     0
+..                        ...  ...          ...                   ...   ...
+195                     51.68   49     51067.54                258.62     0
+196                     56.30   49     67430.96                135.24     1
+197                     59.51   58     39132.64                140.83     0
+198                     76.21   31     65834.97                228.94     1
+199                     56.14   38     32689.04                113.53     1
+
+[200 rows x 5 columns],      Clicked on Ad
+0                1
+1                1
+2                1
+3                1
+4                0
+..             ...
+195              1
+196              1
+197              1
+198              0
+199              1
+
+[200 rows x 1 columns]), and kwargs: {}
+INFO:root:Ran with args: (<main_runtime.TheAlgorithm object at 0x79dcbf6da380>,), and kwargs: {}
+INFO:root:Ran with args: (<main_runtime.TheAlgorithm object at 0x79dcbf6da380>,), and kwargs: {}
+INFO:root:Ran with args: (<main_runtime.TheAlgorithm object at 0x79dcbf6da380>,), and kwargs: {}
