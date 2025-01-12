@@ -82,7 +82,5 @@ if __name__ == '__main__':
     reference_train_confusion_matrix = pd.DataFrame(ta.train_confusion_matrix)
     reference_train_confusion_matrix.to_csv(reference_train_confusion_matrix_file, index=False)
 
-# Schließen der Ausgabe-Datei
-sys.stdout.close()
 
 
