@@ -25,7 +25,7 @@ Ergebnis nach der Ausführung der "test_runtime.py":
 
 
 
-Die Ergbisse confunsion Matrix sowie die Accuracies sind nochmal in dem Order "Data" zufinden.
+Die Ergebnisse, wie die Confusion-Matrix sowie die Accuracies, sind nochmals im Ordner "Data" zu finden.
 
  
 # Mybinder
