@@ -5,7 +5,7 @@
 - Betrieb und Ablauf von ML basierter Software transparent gestalten
 - Automatisches Testen von ML basierten SW Systemen
 
-# Ausführen
+# Ausführen MYbinder
 1.Öffnen Sie den Link zu Binder, den Sie im Binder-Badge in der README-Datei finden. Dadurch wird eine Binder-Umgebung gestartet.
 
 2.Starten Sie ein neues Terminal innerhalb der Binder-Umgebung.
@@ -21,7 +21,15 @@
 5.Geben Sie den folgenden Befehl ein, um die Unit-Tests auszuführen:
 
       python -m unittest test_runtime.py
-   
+      
+# Mybinder
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2/HEAD)
+
+# Ausführen Colabs
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2/blob/main/run_script.ipynb)
+
 
 # Erwartete Ergebnis:
 Ergebnis nach der Ausführung "main_runtime.py":
@@ -39,14 +47,6 @@ Ergebnis nach der Ausführung der "test_runtime.py":
 Die Ergebnisse, wie die Confusion-Matrix sowie die Accuracies, sind nochmals im Ordner "Data" zu finden.
 
  
-# Mybinder
-
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2/HEAD)
-
-
-## Colab
-
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2/blob/main/run_script.ipynb)
 
 
 
