@@ -34,7 +34,7 @@ Klicken Sie auf den folgenden Badge, um das Projekt direkt auf Google Colab zu Ã
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2/blob/main/run_script.ipynb)
 
-# Manuell:
+### Manuell:
 
 1.
 
