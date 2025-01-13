@@ -31,6 +31,19 @@
 
 Klicken Sie auf den folgenden Badge, um das Projekt direkt auf Google Colab zu öffnen. Bitte führen Sie dort durch das Drücken "Shift"+ "Enter" die Befehle aus.
 
+# Klonen des GitHub-Repositories
+!git clone https://github.com/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2.git
+%cd DBE-Angleichsleistung-Aufgabe-2
+
+# Installation der Abhängigkeiten
+!pip install -r requirements.txt
+
+# Ausführen des Hauptskripts
+!python main_runtime.py
+
+# Unit-Tests ausführen
+!python -m unittest test_runtime.py
+
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FranjoHHZ/DBE-Angleichsleistung-Aufgabe-2/blob/main/run_script.ipynb)
 
 
