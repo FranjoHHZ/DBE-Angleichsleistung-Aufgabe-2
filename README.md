@@ -5,7 +5,7 @@
 - Betrieb und Ablauf von ML basierter Software transparent gestalten
 - Automatisches Testen von ML basierten SW Systemen
 
-# Ausführen MYbinder
+# Ausführen MyBinder
 1.Öffnen Sie den Link zu Binder, den Sie im Binder-Badge in der README-Datei finden. Dadurch wird eine Binder-Umgebung gestartet.
 
 2.Starten Sie ein neues Terminal innerhalb der Binder-Umgebung.
